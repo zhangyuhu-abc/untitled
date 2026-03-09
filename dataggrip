@@ -1,0 +1,9 @@
+show databases;
+use itcast;
+show tables ;
+create table newtable(     id int primary key auto_increment comment '编号',     emp_id varchar(10) comment '员工工号',     name varchar(10) comment '员工姓名',     gender char(1) comment '员工性别',     age tinyint unsigned comment '员工年龄',     card_id char(18) comment '身份证号码',     entrydate date comment '入职时间' ) comment '员工表';
+desc newtable; insert into newtable(id, emp_id, name, gender, age, card_id, entrydate) values (1,'00001','张三丰','男',63,'12345678987456321X','1987-10-10'),        (2,'00002','张翠山','男',48,'123256789874563214','2011-1-19'),        (3,'00003','张无忌','男',26,null,'2020-1-19'),        (4,'00004','赵敏','女',23,'123256789874563211','2012-1-19'),        (5,'00005','郭襄','女',19,'123256789874563212','2013-1-19'),        (6,'00006','韦一笑','男',51,'123256789874563213','2014-1-19'),        (7,'00007','殷天正','男',47,'123256789874563215','2015-1-19'),        (8,'00008','玄冥一','男',68,'123256789874563216','2016-1-19'),        (9,'00009','周芷若','女',22,'123256789874563217','2017-1-19'),        (10,'000010','灭绝','女',47,'123256789874563219','2018-1-19');
+update newtable set name='小昭',gender='女' where id=1;
+select entrydate riqi from newtable ;
+select age from newtable where age<=20;
+delete newtable from newtable where gender='男';
